@@ -52,3 +52,5 @@
 
 (require 'global-defaults)
 (require 'global-key-bindings)
+
+(require 'setup-package)
