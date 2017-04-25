@@ -40,3 +40,12 @@
 ;; for example hypothetically is-windows and is-linux
 (setq is-mac (equal system-type 'darwin))
 
+(when window-system
+
+  ;set window size
+  (add-to-list 'default-frame-alist '(width . 177)) ; columns wide
+  (add-to-list 'default-frame-alist '(height . 50)) ; rows deep
+
+  ;;turn on desktop-save-mode and always save; this is NOT saveplace stuff
+  (setq desktop-save t)
+  (desktop-save-mode 1))
