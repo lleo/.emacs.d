@@ -25,3 +25,13 @@
 ;; Set up load path
 (add-to-list 'load-path my-lisp-dir)
 (add-to-list 'load-path elpa-dir)
+
+;; Write backup files to own directory
+(setq backup-directory-alist `(("." . ,(expand-file-name
+                                        (concat dotfiles-dir "backups")))))
+
+;; Save point position between sessions
+(require 'saveplace)
+(setq-default save-place t)
+(setq save-place-file (expand-file-name ".places" dotfiles-dir))
+
