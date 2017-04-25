@@ -35,3 +35,8 @@
 (setq-default save-place t)
 (setq save-place-file (expand-file-name ".places" dotfiles-dir))
 
+;; boolean symbol identifying the host os
+;; their could/should be other symbols for other systems
+;; for example hypothetically is-windows and is-linux
+(setq is-mac (equal system-type 'darwin))
+
