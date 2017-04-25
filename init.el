@@ -49,3 +49,6 @@
   ;;turn on desktop-save-mode and always save; this is NOT saveplace stuff
   (setq desktop-save t)
   (desktop-save-mode 1))
+
+(require 'global-defaults)
+(require 'global-key-bindings)
