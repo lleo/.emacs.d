@@ -24,7 +24,7 @@
  '(js3-strict-inconsistent-return-warning nil)
  '(package-selected-packages
    (quote
-	(go-playground go-rename go-guru go-autocomplete go-mode js3-mode auto-complete multiple-cursors linum-off ido-ubiquitous yasnippet magit color-theme-sanityinc-tomorrow expand-region)))
+	(ac-cider cider-hydra cider-spy cider clojure-cheatsheet clojure-snippets clojure-mode rainbow-delimiters parinfer parinfer-mode paredit go-playground go-rename go-guru go-autocomplete go-mode js3-mode auto-complete multiple-cursors linum-off ido-ubiquitous yasnippet magit color-theme-sanityinc-tomorrow expand-region)))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces

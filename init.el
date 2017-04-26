@@ -66,3 +66,6 @@
 (require 'setup-auto-complete)
 (require 'setup-js3)
 (require 'setup-golang)
+(require 'setup-emacs-lisp-mode)
+(require 'setup-clojure)
+(require 'setup-server)
