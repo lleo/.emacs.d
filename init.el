@@ -1,4 +1,7 @@
-;; FRESH EMACS CONFIG .init.el
+;;;; FRESH EMACS CONFIG .init.el
+
+;; Added by Package.el.  This must come before configurations of ...
+;;(package-initialize)
 
 ;; Turn off mouse interface early in startup to avoid momentary display
 (when (not window-system)
@@ -54,3 +57,5 @@
 (require 'global-key-bindings)
 
 (require 'setup-package)
+;(require 'setup-packages)
+(require 'setup-expand-region)
