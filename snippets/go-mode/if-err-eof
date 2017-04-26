@@ -1,0 +1,8 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: if-err-eof
+# key: ifeof
+# binding: direct-keybinding
+# --
+if ${1:err} != nil && $1 != io.EOF {
+   ${2:log.Fatal(${3:$1})}
+}$0

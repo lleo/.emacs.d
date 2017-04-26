@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: errorf
+# key: errorf
+# binding: direct-keybinding
+# --
+fmt.Errorf("$1"$2)$0

@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: node-function-expr
+# key: nfn
+# --
+function(${1:err}$2) {
+  if ($1) { ${3:cb}($1); return }
+  $0
+}

@@ -1,0 +1,10 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: if-err-defer
+# key: ifed
+# binding: direct-keybinding
+# --
+if ${1:err} != nil {
+   ${2:log.Fatal(${3:$1})}
+}
+defer $4
+$0
