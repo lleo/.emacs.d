@@ -60,3 +60,5 @@
 (require 'setup-expand-region)
 (require 'setup-hide-show)
 (require 'setup-yasnippet)
+(require 'setup-ido)
+;(require 'setup-linum)
