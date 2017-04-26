@@ -55,7 +55,6 @@
 
 (require 'global-defaults)
 (require 'global-key-bindings)
-
-(require 'setup-package)
-;(require 'setup-packages)
+(require 'setup-package) ;; !!! This MUST come before ANY package configuration/reference !!!
+(require 'setup-packages)
 (require 'setup-expand-region)

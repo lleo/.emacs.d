@@ -15,9 +15,11 @@
 (defvar melpa-stable
   '("melpa-stable" . "https://stable.melpa.org/packages/"))
 
-(add-to-list 'package-archives melpa-stable t)
-(add-to-list 'package-archives melpa t)
+;; these are prepend ops; so we declare them in reverse order
+;; gnu is already on the list.
 (add-to-list 'package-archives marmalade)
+(add-to-list 'package-archives melpa)
+(add-to-list 'package-archives melpa-stable)
 
 (package-initialize)
 
