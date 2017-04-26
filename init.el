@@ -58,3 +58,5 @@
 (require 'setup-package) ;; !!! This MUST come before ANY package configuration/reference !!!
 (require 'setup-packages)
 (require 'setup-expand-region)
+(require 'setup-hide-show)
+(require 'setup-yasnippet)
