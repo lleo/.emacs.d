@@ -22,6 +22,8 @@
 (global-linum-mode t)
 (setq linum-format "%3d")
 
+(column-number-mode) ;; in the status bar
+
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (global-set-key [remap eval-last-sexp] 'pp-eval-last-sexp)
