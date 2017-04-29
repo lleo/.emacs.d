@@ -27,7 +27,7 @@
 
 
 (add-hook 'clojure-mode-hook 'paredit-mode)
-(add-hook 'clojure-mode-hook 'parinfer-mode)
+;;(add-hook 'clojure-mode-hook 'parinfer-mode)
 (add-hook 'clojure-mode-hook 'rainbow-delimiters-mode)
 
 
