@@ -72,4 +72,5 @@
 (require 'setup-golang)
 (require 'setup-emacs-lisp-mode)
 (require 'setup-clojure)
+(require 'setup-nodejs)
 (require 'setup-server)
