@@ -24,6 +24,7 @@
  ;;(cons 'cider melpa-stable)                ; installed manually
  ;;(cons 'cider-spy melpa-stable)            ; installed manually
  ;;(cons 'cider-hydra melpa))                ; installed manually
+ (cons 'nodejs-repl melpa-stable)
  ;;foobar
  ) 
  
