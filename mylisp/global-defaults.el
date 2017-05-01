@@ -1,6 +1,10 @@
 ;; for go-mode where I use actual tabs for indentation
 (setq default-tab-width 4)
 
+;; whitespace-style same as default, except I've removed newline-mark
+;; and space-mark
+(setq whitespace-style '(face tabs spaces trailing lines newline space-before-tab indentation empty space-after-tab tab-mark))
+
 (setq show-trailing-whitespace t)
 ;; M-x set-variable show-trailing-whitespace t
 
