@@ -61,6 +61,7 @@
 (require 'setup-package)
 (require 'setup-packages)
 
+(require 'setup-changes)
 (require 'setup-expand-region)
 (require 'setup-hide-show)
 (require 'setup-yasnippet)
