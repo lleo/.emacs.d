@@ -3,9 +3,12 @@
 
 ;; whitespace-style same as default, except I've removed newline-mark
 ;; and space-mark
-(setq whitespace-style '(face tabs spaces trailing lines newline space-before-tab indentation empty space-after-tab tab-mark))
+(setq whitespace-style '(face tabs spaces trailing lines newline
+						 space-before-tab indentation empty space-after-tab
+						 tab-mark))
 
-(setq show-trailing-whitespace t)
+(global-whitespace-mode t)
+;;(setq show-trailing-whitespace t)
 ;; M-x set-variable show-trailing-whitespace t
 
 (setq x-stretch-cursor t) ;;show tabs with wide cursor
