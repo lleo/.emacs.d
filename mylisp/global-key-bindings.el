@@ -1,4 +1,3 @@
-
 (when is-mac
   ;; give me back my option key
   ;; mac-option-modifier is an alias for ns-alternate-modifier
