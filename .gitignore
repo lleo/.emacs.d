@@ -1,3 +1,8 @@
 .emacs.desktop
 .emacs.desktop.lock
 .mc-lists.el
+backups/
+ac-comphist.dat
+auto-save-list/
+elpa/
+ido.last
