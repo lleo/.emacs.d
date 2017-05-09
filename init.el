@@ -65,6 +65,7 @@
 (require 'setup-clojure)
 (require 'setup-nodejs)
 (require 'setup-server)
+(require 'setup-smart-tabs)
 
 (load custom-file)
 (load-theme 'sanityinc-tomorrow-bright)
