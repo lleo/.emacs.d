@@ -17,7 +17,7 @@
 
 ;; Keep emacs Custom-settings in separate file
 (setq custom-file (expand-file-name "custom.el" dotfiles-dir))
-(load custom-file)
+;;(load custom-file)
 
 ;; Set my-lisp-dir variable to .emacs.d/mylisp
 (setq my-lisp-dir (expand-file-name "mylisp" dotfiles-dir))
@@ -43,16 +43,6 @@
 ;; for example hypothetically is-windows and is-linux
 (setq is-mac (equal system-type 'darwin))
 
-(when window-system
-
-  ;set window size
-  (add-to-list 'default-frame-alist '(width . 177)) ; columns wide
-  (add-to-list 'default-frame-alist '(height . 50)) ; rows deep
-
-  ;;turn on desktop-save-mode and always save; this is NOT saveplace stuff
-  (setq desktop-save t)
-  (desktop-save-mode 1))
-
 (require 'global-defaults)
 (require 'global-key-bindings)
 (require 'setup-path)
@@ -75,3 +65,16 @@
 (require 'setup-clojure)
 (require 'setup-nodejs)
 (require 'setup-server)
+
+(load custom-file)
+(load-theme 'sanityinc-tomorrow-bright)
+
+(when window-system
+
+  ;set window size
+  (add-to-list 'default-frame-alist '(width . 177)) ; columns wide
+  (add-to-list 'default-frame-alist '(height . 50)) ; rows deep
+
+  ;;turn on desktop-save-mode and always save; this is NOT saveplace stuff
+  (setq desktop-save t)
+  (desktop-save-mode 1))
