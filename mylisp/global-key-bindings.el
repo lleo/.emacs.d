@@ -49,12 +49,12 @@ vi style of % jumping to matching brace."
 (global-set-key (kbd "C-%") 'goto-match-paren)
 
 ;; this requires a previous regex search hence 'search-forward-regex
-(global-set-key (kbd "C-_") 'text-scale-decrease)
-(global-set-key (kbd "C-+") 'text-scale-increase)
-;(global-set-key (kbd "M-#") 'isearch-query-replace-regexp)
+(global-set-key (kbd "C-_") 'text-scale-increase)
+(global-set-key (kbd "C--") 'text-scale-decrease)
+;;(global-set-key (kbd "M-#") 'isearch-query-replace-regexp)
 (global-set-key (kbd "M-#") 'query-replace-regexp) ;currently C-M-%
-;(global-set-key (kbd "C-c C-s") 'isearch-forward-regexp)
-;(global-set-key (kbd "C-c C-r") 'isearch-backward-regexp)
+;;;;(global-set-key (kbd "C-c C-s") 'isearch-forward-regexp)
+;;(global-set-key (kbd "C-c C-r") 'isearch-backward-regexp)
 (global-set-key (kbd "C-/") 'isearch-forward-regexp)
 (global-set-key (kbd "C-?") 'isearch-backward-regexp)
 
