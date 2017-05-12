@@ -4,7 +4,7 @@
 ;; whitespace-style same as default, except I've removed newline-mark
 ;; and space-mark
 (setq whitespace-style '(face trailing lines newline space-before-tab
-                         indentation empty space-after-tab tab-mark))
+                         empty space-after-tab tab-mark))
 
 (global-whitespace-mode t)
 ;;(setq show-trailing-whitespace t)
