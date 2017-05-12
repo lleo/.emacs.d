@@ -66,6 +66,7 @@
 (require 'setup-nodejs)
 (require 'setup-server)
 (require 'setup-smart-tabs)
+(require 'setup-perl)
 
 (load custom-file)
 (load-theme 'sanityinc-tomorrow-bright)
