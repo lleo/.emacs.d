@@ -67,6 +67,7 @@
 (require 'setup-server)
 (require 'setup-smart-tabs)
 (require 'setup-perl)
+(require 'setup-org-mode)
 
 (load custom-file)
 (load-theme 'sanityinc-tomorrow-bright)
