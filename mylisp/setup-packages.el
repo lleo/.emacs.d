@@ -12,7 +12,7 @@
  (cons 'go-rename melpa-stable)
  (cons 'go-playground melpa-stable)
  (cons 'paredit melpa-stable)
- (cons 'parinfer melpa-stable)       ; installed manually
+ (cons 'parinfer melpa-stable)
  (cons 'rainbow-delimiters melpa-stable)
  (cons 'clojure-mode melpa-stable)
  (cons 'clojure-snippets melpa-stable)
