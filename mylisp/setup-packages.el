@@ -16,7 +16,7 @@
  (cons 'rainbow-delimiters melpa-stable)
  (cons 'clojure-mode melpa-stable)
  (cons 'clojure-snippets melpa-stable)
- ;;(cons 'queue melpa)                       ; installed manually
+ (cons 'queue gnu)
  ;;(cons 'clojure-cheatsheet melpa-stable)   ; installed manually
  (cons 'clojure-mode-extra-font-locking melpa-stable)
  ;;(cons 'ac-cider melpa-stable)             ; installed manually
