@@ -24,9 +24,10 @@
  ;;(cons 'cider-spy melpa-stable)            ; installed manually
  ;;(cons 'cider-hydra melpa))                ; installed manually
  (cons 'nodejs-repl melpa-stable)
+ (cons 'smart-tabs-mode melpa)
+ (cons 'js2-mode melpa-stable)
+ (cons 'org-bullets melpa-stable)
  ;;foobar
- ) 
- 
-
+ )
 
 (provide 'setup-packages)

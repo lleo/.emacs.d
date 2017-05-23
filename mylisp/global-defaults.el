@@ -2,7 +2,10 @@
 ;;(setq default-tab-width 8)
 
 ;; whitespace-style same as default, except I've removed newline-mark
-;; and space-mark
+;; and space-mark. If you don't like the » single character symbol
+;; that indicates tabs remove "tab-mark" from white-space-style.
+;; BTW » is \u00BB aka &raquo; in HTML or
+;; RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK in unicode.
 (setq whitespace-style '(face trailing lines newline space-before-tab
                          empty space-after-tab tab-mark))
 
