@@ -24,6 +24,7 @@
  (cons 'smart-tabs-mode melpa)
  (cons 'js2-mode melpa-stable)
  (cons 'org-bullets melpa-stable)
+ (cons 'markdown-mode melpa-stable)
  ;;foobar
  )
 

@@ -25,7 +25,7 @@
  '(lisp-indent-function (quote common-lisp-indent-function))
  '(package-selected-packages
    (quote
-    (ceylon-mode org-bullets smart-tabs-mode js2-mode vdiff helm minimap diff-hl nodejs-repl ac-cider cider-hydra cider-spy cider clojure-cheatsheet clojure-snippets clojure-mode rainbow-delimiters parinfer parinfer-mode paredit go-playground go-rename go-guru go-autocomplete go-mode js3-mode auto-complete multiple-cursors linum-off ido-ubiquitous yasnippet magit color-theme-sanityinc-tomorrow expand-region)))
+    (markdown-mode ceylon-mode org-bullets smart-tabs-mode js2-mode vdiff helm minimap diff-hl nodejs-repl ac-cider cider-hydra cider-spy cider clojure-cheatsheet clojure-snippets clojure-mode rainbow-delimiters parinfer parinfer-mode paredit go-playground go-rename go-guru go-autocomplete go-mode js3-mode auto-complete multiple-cursors linum-off ido-ubiquitous yasnippet magit color-theme-sanityinc-tomorrow expand-region)))
  '(show-paren-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces
