@@ -17,12 +17,9 @@
  (cons 'clojure-mode melpa-stable)
  (cons 'clojure-snippets melpa-stable)
  (cons 'queue gnu)
- ;;(cons 'clojure-cheatsheet melpa-stable)   ; installed manually
  (cons 'clojure-mode-extra-font-locking melpa-stable)
- ;;(cons 'ac-cider melpa-stable)             ; installed manually
  ;;(cons 'cider melpa-stable)                ; installed manually
- ;;(cons 'cider-spy melpa-stable)            ; installed manually
- ;;(cons 'cider-hydra melpa))                ; installed manually
+ ;;(cons 'ac-cider melpa-stable)             ; installed manually
  (cons 'nodejs-repl melpa-stable)
  (cons 'smart-tabs-mode melpa)
  (cons 'js2-mode melpa-stable)
