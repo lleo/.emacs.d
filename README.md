@@ -16,13 +16,14 @@ You will find that spaces before tab will be pointed out with a big spotlight.
 
 For example:
 
-      	This line shows up under my  emacs config as two gray-background spaces
-    and the tab is replace by "»  " or "&raquo;&nbsp;&nbsp;" characters. If you
-    are a python person you will love this. If you are just a pedantic twit
-    about whitespace (like me) you'll like it as well. If you don't care what
-    whitespace is in your white space it'll be annoying. You can control the
-    behaviour in the mylisp/global-defaults.el file under the "whitespace-style"
-    variable there.
+      	indented.code(by, 2, spaces and aTab)
+
+This line shows up under my  emacs config as two gray-background spaces and
+the tab is replace by "»  " or "&raquo;&nbsp;&nbsp;" characters. If you are
+a python person you will love this. If you are just a pedantic twit about
+whitespace (like me) you'll like it as well. If you don't care what whitespace
+is in your white space it'll be annoying. You can control the behaviour in the
+mylisp/global-defaults.el file under the "whitespace-style" variable there.
 
 Well behaved whitespace just looks like whitespace.
 
