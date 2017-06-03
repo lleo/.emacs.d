@@ -13,6 +13,8 @@
 ;;(setq show-trailing-whitespace t)
 ;; M-x set-variable show-trailing-whitespace t
 
+(global-hl-line-mode t)
+
 (setq x-stretch-cursor t) ;;show tabs with wide cursor
 
 ;; automatically insert matching pair for example type "(" get ")" with the
