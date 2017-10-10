@@ -1,7 +1,10 @@
 ;; Interactively Do Things
 
 (require 'ido)
+
 (ido-mode t)
+(ido-everywhere 1)
+
 (setq ido-enable-prefix nil
       ido-enable-flex-matching t
       ido-create-new-buffer 'always
@@ -24,8 +27,8 @@
 (add-to-list 'ido-ignore-directories "node_modules")
 
 ;; Use ido everywhere
-(require 'ido-ubiquitous)
-(ido-ubiquitous-mode 1)
+;;(require 'ido-ubiquitous)
+;;(ido-ubiquitous-mode 1)
 
 (provide 'setup-ido)
 

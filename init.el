@@ -1,4 +1,5 @@
 ;;;; FRESH EMACS CONFIG .init.el
+;;added to check ~/.git config
 
 ;; Added by Package.el.  This must come before configurations of ...
 ;;(package-initialize)

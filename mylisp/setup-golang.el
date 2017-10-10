@@ -20,7 +20,17 @@
   ;;not (set-variable 'tab-width 4 t) ;;with or without last parameter t
   (set 'tab-width 4)
   ;;
-  ;(go-guru-hl-identifier-mode 1)
+  ;;(go-guru-hl-identifier-mode 1)
+  ;;
+  ;;  (require 'go-eldoc)
+  ;;  (add-hook 'go-mode-hook 'go-eldoc-setup)
+  ;;
+  ;;(require 'go-complete)
+  ;;(add-hook 'completion-at-point-functions 'go-complete-at-point)
+  ;;You need to have gocode (https://github.com/nsf/gocode) installed to use
+  ;;this package.
+  ;;
+  ;; https://github.com/syohex/emacs-go-impl
   )
 
 (add-hook 'go-mode-hook 'my-go-mode-hook)
