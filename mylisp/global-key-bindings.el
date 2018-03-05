@@ -36,6 +36,7 @@
   (copy-to-register register start end t))
 
 (global-set-key (kbd "C-x r x") 'my-cut-to-register)
+(global-set-key (kbd "C-x C-o") 'overwrite-mode) ;;was 'delete-blank-lines
 
 
 (defun goto-match-paren (arg)

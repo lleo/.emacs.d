@@ -37,5 +37,7 @@
 (add-hook 'go-mode-hook 'go-guru-hl-identifier-mode)
 
 (setq gofmt-command "goimports")
+;;(setq gofmt-command "gofmt")
+;;(setq gofmt-args (quote ("-s")))
 
 (provide 'setup-golang)

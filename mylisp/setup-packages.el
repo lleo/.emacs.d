@@ -25,6 +25,7 @@
  (cons 'js2-mode melpa-stable)
  (cons 'org-bullets melpa-stable)
  (cons 'markdown-mode melpa-stable)
+ (cons 'lua-mode melpa-stable)
  ;;foobar
  )
 

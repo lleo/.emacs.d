@@ -48,6 +48,10 @@
 (require 'global-key-bindings)
 (require 'setup-path)
 
+;;
+;; !!! REMEMBER ielm is the interactive elisp command line interface
+;;
+
 ;; !!! This MUST come before ANY package configuration/reference !!!
 (require 'setup-package)
 (require 'setup-packages)
@@ -70,6 +74,7 @@
 (require 'setup-perl)
 (require 'setup-org-mode)
 (require 'setup-markdown)
+(require 'setup-lua)
 
 (load custom-file)
 (load-theme 'sanityinc-tomorrow-bright)
