@@ -4,5 +4,5 @@
 # binding: direct-keybinding
 # --
 func main () {
-	 $0
+	$0
 }

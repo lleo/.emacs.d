@@ -1,9 +1,9 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: import
-# key: imp
+# name: import-fmt
+# key: impf
 # binding: direct-keybinding
 # --
 import (
-	"$1"
+	"fmt"
 )
 $0

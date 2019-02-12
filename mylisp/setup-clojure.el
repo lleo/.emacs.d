@@ -1,7 +1,8 @@
-
 ;; Clojure
+
 (setq auto-mode-alist (cons '("\\.edn$" . clojure-mode) auto-mode-alist))  ; *.edn are Clojure files
-(setq auto-mode-alist (cons '("\\.cljs$" . clojure-mode) auto-mode-alist)) ; *.cljs are Clojure files
+(setq auto-mode-alist (cons '("\\.cljs$" . clojure-mode) auto-mode-alist)) ; *.cljs are ClojureScript files
+(setq auto-mode-alist (cons '("\\.cljc$" . clojure-mode) auto-mode-alist)) ; *.cljs are Clojure files
 (setq auto-mode-alist (cons '("\\.boot$" . clojure-mode) auto-mode-alist))
 
 ;; nREPL customizations

@@ -6,3 +6,7 @@ ac-comphist.dat
 auto-save-list/
 elpa/
 ido.last
+recentf
+tramp
+*.swp
+.lsp-session-v1

@@ -56,6 +56,8 @@
 (require 'setup-package)
 (require 'setup-packages)
 
+(require 'setup-lsp)
+(require 'setup-company)
 (require 'setup-changes)
 (require 'setup-expand-region)
 (require 'setup-hide-show)
@@ -63,7 +65,7 @@
 (require 'setup-ido)
 (require 'setup-linum)
 (require 'setup-multiple-cursors)
-(require 'setup-auto-complete)
+;;(require 'setup-auto-complete)
 (require 'setup-js3)
 (require 'setup-golang)
 (require 'setup-emacs-lisp-mode)
@@ -75,6 +77,8 @@
 (require 'setup-org-mode)
 (require 'setup-markdown)
 (require 'setup-lua)
+(require 'setup-flatbuffers)
+(require 'setup-popwin)
 
 (load custom-file)
 (load-theme 'sanityinc-tomorrow-bright)

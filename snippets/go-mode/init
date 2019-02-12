@@ -1,9 +1,9 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: import
-# key: imp
+# name: init
+# key: i
 # binding: direct-keybinding
 # --
-import (
-	"$1"
-)
+func init() {
+	$1
+}
 $0

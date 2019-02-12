@@ -1,0 +1,15 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: program
+# key: p
+# binding: direct-keybinding
+# --
+package main
+
+import (
+       "fmt"
+)
+
+func main() {
+     fmt.Println("$1")
+     $0
+}

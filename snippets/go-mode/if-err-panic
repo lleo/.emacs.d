@@ -1,9 +1,8 @@
 # -*- mode: snippet; require-final-newline: nil -*-
-# name: import
-# key: imp
+# name: if-err-panic
+# key: ifep
 # binding: direct-keybinding
 # --
-import (
-	"$1"
-)
-$0
+if ${1:err} != nil {
+	panic(${2:$1})
+}

@@ -31,4 +31,3 @@
 ;;(ido-ubiquitous-mode 1)
 
 (provide 'setup-ido)
-
