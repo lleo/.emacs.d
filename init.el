@@ -65,7 +65,7 @@
 (require 'setup-ido)
 (require 'setup-linum)
 (require 'setup-multiple-cursors)
-;;(require 'setup-auto-complete)
+(require 'setup-auto-complete)
 (require 'setup-js3)
 (require 'setup-golang)
 (require 'setup-emacs-lisp-mode)
