@@ -1,0 +1,415 @@
+paredit-mode is an interactive autoloaded compiled Lisp function in
+‘paredit.el’.
+
+(paredit-mode &optional ARG)
+
+Minor mode for pseudo-structurally editing Lisp code.
+With a prefix argument, enable Paredit Mode even if there are
+  unbalanced parentheses in the buffer.
+Paredit behaves badly if parentheses are unbalanced, so exercise
+  caution when forcing Paredit Mode to be enabled, and consider
+  fixing unbalanced parentheses instead.
+
+
+Basic Insertion Commands
+
+
+(	paredit-open-round
+(a b |c d)
+  --->
+(a b (|) c d)
+
+(foo "bar |baz" quux)
+  --->
+(foo "bar (|baz" quux)
+
+
+)	paredit-close-round
+(a b |c   )
+  --->
+(a b c)|
+
+; Hello,| world!
+  --->
+; Hello,)| world!
+
+
+M-)	paredit-close-round-and-newline
+(defun f (x|  ))
+  --->
+(defun f (x)
+  |)
+
+; (Foo.|
+  --->
+; (Foo.)|
+
+
+[	paredit-open-square
+(a b |c d)
+  --->
+(a b [|] c d)
+
+(foo "bar |baz" quux)
+  --->
+(foo "bar [|baz" quux)
+
+
+]	paredit-close-square
+(define-key keymap [frob|  ] ’frobnicate)
+  --->
+(define-key keymap [frob]| ’frobnicate)
+
+; [Bar.|
+  --->
+; [Bar.]|
+
+
+"	paredit-doublequote
+(frob grovel |full lexical)
+  --->
+(frob grovel "|" full lexical)
+  --->
+(frob grovel ""| full lexical)
+
+(foo "bar |baz" quux)
+  --->
+(foo "bar \"|baz" quux)
+
+(frob grovel)   ; full |lexical
+  --->
+(frob grovel)   ; full "|lexical
+
+
+M-"	paredit-meta-doublequote
+(foo "bar |baz" quux)
+  --->
+(foo "bar baz"| quux)
+
+(foo |(bar #\x "baz \\ quux") zot)
+  --->
+(foo "|(bar #\\x \"baz \\\\ quux\")" zot)
+
+
+\	paredit-backslash
+(string #|)
+  ; Character to escape: x
+  --->
+(string #\x|)
+
+"foo|bar"
+  ; Character to escape: "
+  --->
+"foo\"|bar"
+
+
+;	paredit-semicolon
+|(frob grovel)
+  --->
+;|(frob grovel)
+
+(frob |grovel)
+  --->
+(frob ;|grovel
+ )
+
+(frob |grovel (bloit
+               zargh))
+  --->
+(frob ;|grovel
+ (bloit
+  zargh))
+
+(frob grovel)          |
+  --->
+(frob grovel)          ;|
+
+
+M-;	paredit-comment-dwim
+(foo |bar)   ; baz
+  --->
+(foo bar)                               ; |baz
+
+(frob grovel)|
+  --->
+(frob grovel)                           ;|
+
+(zot (foo bar)
+|
+     (baz quux))
+  --->
+(zot (foo bar)
+     ;; |
+     (baz quux))
+
+(zot (foo bar) |(baz quux))
+  --->
+(zot (foo bar)
+     ;; |
+     (baz quux))
+
+|(defun hello-world ...)
+  --->
+;;; |
+(defun hello-world ...)
+
+
+C-j	paredit-newline
+(let ((n (frobbotz))) |(display (+ n 1)
+port))
+  --->
+(let ((n (frobbotz)))
+  |(display (+ n 1)
+           port))
+
+
+Deleting & Killing
+
+
+C-d	paredit-forward-delete
+(quu|x "zot")
+  --->
+(quu| "zot")
+
+(quux |"zot")
+  --->
+(quux "|zot")
+  --->
+(quux "|ot")
+
+(foo (|) bar)
+  --->
+(foo | bar)
+
+|(foo bar)
+  --->
+(|foo bar)
+
+
+DEL	paredit-backward-delete
+("zot" q|uux)
+  --->
+("zot" |uux)
+
+("zot"| quux)
+  --->
+("zot|" quux)
+  --->
+("zo|" quux)
+
+(foo (|) bar)
+  --->
+(foo | bar)
+
+(foo bar)|
+  --->
+(foo bar|)
+
+
+C-k	paredit-kill
+(foo bar)|     ; Useless comment!
+  --->
+(foo bar)|
+
+(|foo bar)     ; Useful comment!
+  --->
+(|)     ; Useful comment!
+
+|(foo bar)     ; Useless line!
+  --->
+|
+
+(foo "|bar baz"
+     quux)
+  --->
+(foo "|"
+     quux)
+
+
+M-d	paredit-forward-kill-word
+|(foo bar)    ; baz
+  --->
+(| bar)    ; baz
+  --->
+(|)    ; baz
+  --->
+()    ;|
+
+;;;| Frobnicate
+(defun frobnicate ...)
+  --->
+;;;|
+(defun frobnicate ...)
+  --->
+;;;
+(| frobnicate ...)
+
+
+M-DEL	paredit-backward-kill-word
+(foo bar)    ; baz
+(quux)|
+  --->
+(foo bar)    ; baz
+(|)
+  --->
+(foo bar)    ; |
+()
+  --->
+(foo |)    ; 
+()
+  --->
+(|)    ; 
+()
+
+
+Movement & Navigation
+
+
+C-M-f	paredit-forward
+(foo |(bar baz) quux)
+  --->
+(foo (bar baz)| quux)
+
+(foo (bar)|)
+  --->
+(foo (bar))|
+
+
+C-M-b	paredit-backward
+(foo (bar baz)| quux)
+  --->
+(foo |(bar baz) quux)
+
+(|(foo) bar)
+  --->
+|((foo) bar)
+
+
+C-M-u	paredit-backward-up
+  (no examples)
+
+
+C-M-d	paredit-forward-down
+  (no examples)
+
+
+C-M-p	paredit-backward-down
+  (no examples)
+
+
+C-M-n	paredit-forward-up
+  (no examples)
+
+
+Depth-Changing Commands
+
+
+M-(	paredit-wrap-round
+(foo |bar baz)
+  --->
+(foo (|bar) baz)
+
+
+M-s	paredit-splice-sexp
+(foo (bar| baz) quux)
+  --->
+(foo bar| baz quux)
+
+
+<M-up>	paredit-splice-sexp-killing-backward
+(foo (let ((x 5)) |(sqrt n)) bar)
+  --->
+(foo |(sqrt n) bar)
+
+
+<M-down>	paredit-splice-sexp-killing-forward
+(a (b c| d e) f)
+  --->
+(a b c| f)
+
+
+M-r	paredit-raise-sexp
+(dynamic-wind in (lambda () |body) out)
+  --->
+(dynamic-wind in |body out)
+  --->
+|body
+
+
+M-?	paredit-convolute-sexp
+(let ((x 5) (y 3)) (frob |(zwonk)) (wibblethwop))
+  --->
+(frob |(let ((x 5) (y 3)) (zwonk) (wibblethwop)))
+
+
+Barfage & Slurpage
+
+
+<C-right>	paredit-forward-slurp-sexp
+(foo (bar |baz) quux zot)
+  --->
+(foo (bar |baz quux) zot)
+
+(a b ((c| d)) e f)
+  --->
+(a b ((c| d) e) f)
+
+
+<C-left>	paredit-forward-barf-sexp
+(foo (bar |baz quux) zot)
+  --->
+(foo (bar |baz) quux zot)
+
+
+<C-M-left>	paredit-backward-slurp-sexp
+(foo bar (baz| quux) zot)
+  --->
+(foo (bar baz| quux) zot)
+
+(a b ((c| d)) e f)
+  --->
+(a (b (c| d)) e f)
+
+
+<C-M-right>	paredit-backward-barf-sexp
+(foo (bar baz |quux) zot)
+  --->
+(foo bar (baz |quux) zot)
+
+
+Miscellaneous Commands
+
+
+M-S	paredit-split-sexp
+(hello| world)
+  --->
+(hello)| (world)
+
+"Hello, |world!"
+  --->
+"Hello, "| "world!"
+
+
+M-J	paredit-join-sexps
+(hello)| (world)
+  --->
+(hello| world)
+
+"Hello, "| "world!"
+  --->
+"Hello, |world!"
+
+hello-
+|  world
+  --->
+hello-|world
+
+
+C-c C-M-l	paredit-recenter-on-sexp
+  (no examples)
+
+
+M-q	paredit-reindent-defun
+  (no examples)
+
+[back]

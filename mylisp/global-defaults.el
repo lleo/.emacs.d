@@ -13,7 +13,7 @@
 ;;(setq show-trailing-whitespace t)
 ;; M-x set-variable show-trailing-whitespace t
 
-(global-hl-line-mode t)
+(global-hl-line-mode t) ;;highlight the line currently editing
 
 (setq x-stretch-cursor t) ;;show tabs with wide cursor
 
@@ -39,9 +39,15 @@
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;; From https://www.emacswiki.org/emacs/EvaluatingExpressions
+;; "To make ‘C-x C-e’ pretty-print:"
 (global-set-key [remap eval-last-sexp] 'pp-eval-last-sexp)
 
 (set-language-environment "UTF-8")
 (set-default-coding-systems 'utf-8)
+
+(toggle-truncate-lines)
+;;(setq-default truncate-lines t)
+;;(setq-default global-visual-line-mode nil)
 
 (provide 'global-defaults)

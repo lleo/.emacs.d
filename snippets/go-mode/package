@@ -1,0 +1,19 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: package
+# key: package
+# binding: direct-keybinding
+# --
+package $1
+
+import (
+       "fmt"
+       "log"
+)
+
+var _ = fmt.Println
+var _ = log.Println
+
+
+func ($2 *$1) $3($4) ($5*$1) {
+	 $0
+}

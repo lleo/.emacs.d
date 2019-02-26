@@ -12,7 +12,8 @@
 
   (setq mac-command-modifier 'super)
 
-  (setq mac-funciton-modifier 'hyper)
+  (setq mac-function-modifier 'hyper)
+  ;;(setq ns-function-modifier 'hyper)
 
   ;;(setq mac-control-modifier 'control)
   ;;(setq mac-right-control-modifier 'control)
